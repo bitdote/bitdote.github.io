@@ -26,19 +26,19 @@
   let assets = [
     {
       name: 'Dollar in Gold',
-      symbol: 'USD/XAU|ALL',
+      symbol: 'FX_IDC:USDEUR/USDEUR/XAUUSD|ALL',
     },
     {
       name: 'Dollar in Bitcoin',
-      symbol: 'USD/BTCUSD|ALL',
+      symbol: 'FX_IDC:USDEUR/USDEUR/BTCUSD|ALL',
     },
     {
       name: 'Gold in Dollar',
-      symbol: 'XAU/USD|ALL',
+      symbol: 'XAUUSD|ALL',
     },
     {
       name: 'Gold in Bitcoin',
-      symbol: 'XAU/BTCUSD|ALL',
+      symbol: 'XAUUSD/BTCUSD|ALL',
     },
     {
       name: 'Bitcoin in Dollar',
@@ -46,7 +46,7 @@
     },
     {
       name: 'Bitcoin in Gold',
-      symbol: 'BTCUSD/XAU|ALL',
+      symbol: 'BTCUSD/XAUUSD|ALL',
     },
   ];
 </script>
