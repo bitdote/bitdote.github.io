@@ -30,8 +30,9 @@ import { t } from 'i18next';
         t('impact.cards.individual.points.3'),
       ]}
       icon={'bi-person-fill'}
-      text={t('impact.cards.individual.text')}
-    />
+    >
+      <p>{t('impact.cards.individual.text')}</p>
+    </PointsCard>
     <div class="mt-4">
       <PointsCard
         client:visible
@@ -43,8 +44,9 @@ import { t } from 'i18next';
           t('impact.cards.companies.points.3'),
         ]}
         icon={'bi-building'}
-        text={t('impact.cards.companies.text')}
-      />
+      >
+        <p>{t('impact.cards.companies.text')}</p>
+      </PointsCard>
     </div>
   </div>
 
@@ -61,7 +63,8 @@ import { t } from 'i18next';
         t('impact.cards.society.points.5'),
       ]}
       icon={'bi-people-fill'}
-      text={t('impact.cards.society.text')}
-    />
+    >
+      <p>{t('impact.cards.society.text')}</p>
+    </PointsCard>
   </div>
 </div>

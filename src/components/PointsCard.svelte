@@ -4,7 +4,6 @@
   export let headline: string;
   export let icon: string;
   export let points: string[] = [];
-  export let text: string;
   export let openModalText: string;
 
   var modalOpen = false;
@@ -49,14 +48,14 @@
 {#if modalOpen}
   <div class="fixed inset-0 flex items-center justify-center z-50">
     <div class="fixed inset-0 bg-gray-800 bg-opacity-50 transition-opacity" />
-    <div class="bg-white p-4 md:p-7 max-w-md mx-auto rounded-xl z-50 border-black border-4 border-b-8">
+    <div class="bg-white p-4 md:p-7 max-w-xl mx-auto rounded-xl z-50 border-black border-4 border-b-8">
       <div class="flex justify-between items-center mb-4">
         <h1 class="text-xl font-semibold">{headline}</h1>
         <button on:click={toggleModal}>
           <i class="bi bi-x text-4xl" />
         </button>
       </div>
-      <p>{text}</p>
+      <slot />
     </div>
   </div>
 {/if}
