@@ -9,5 +9,4 @@ import mdx from "@astrojs/mdx";
 export default defineConfig({
   integrations: [svelte(), tailwind(), astroI18next(), mdx()],
   site: 'https://bitdote.github.io',
-  base: '/fixyourmoney',
 });
