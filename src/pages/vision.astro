@@ -1,0 +1,19 @@
+---
+import Donate from "../components/Donate.svelte";
+import BaseLayout from "../layouts/BaseLayout.astro";
+import { t, changeLanguage } from "i18next";
+
+changeLanguage("en");
+---
+
+<BaseLayout title="Vision">
+  <h1>{t('vision.headline')}</h1>
+  <Donate client:visible />
+  <p>{t('vision.text')}</p>
+</BaseLayout>
+
+<style>
+  h1 {
+    @apply text-5xl font-bold mb-6 mt-9;
+  }
+</style>
