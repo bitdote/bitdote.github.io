@@ -49,28 +49,12 @@
       symbol: 'KO',
     },
     {
-      name: 'MSCI World ETF',
-      symbol: 'IRRRF',
-    },
-    {
-      name: 'S&P 500 ETF',
-      symbol: 'SPY',
-    },
-    {
       name: 'Johnson & Johnson',
       symbol: 'JNJ',
     },
     {
       name: 'Bayer AG',
       symbol: 'BAYRY',
-    },
-    {
-      name: 'RWE',
-      symbol: 'RWEOY',
-    },
-    {
-      name: 'Tesla',
-      symbol: 'TSLA',
     },
     {
       name: 'Adidas',
@@ -84,7 +68,63 @@
       name: 'Alphabet',
       symbol: 'GOOGL',
     },
-  ];
+    {
+      name: 'MSCI World',
+      symbol: 'IRRRF',
+    },
+    {
+      name: 'S&P 500',
+      symbol: 'SPY',
+    },
+    {
+      name: 'RWE',
+      symbol: 'FWB:RWE',
+    },
+    {
+      name: 'Bayer AG',
+      symbol: 'XETR:BAYN',
+    },
+    {
+      name: 'Adidas',
+      symbol: 'OTC:ADDYY',
+    },
+    {
+      name: 'Ford',
+      symbol: 'NYSE:F',
+    },
+    {
+      name: 'Mastercard',
+      symbol: 'NYSE:MA',
+    },
+    {
+      name: 'McDonalds',
+      symbol: 'NYSE:MCD',
+    },
+    {
+      name: 'Microsoft',
+      symbol: 'NASDAQ:MSFT',
+    },
+    {
+      name: 'Netflix',
+      symbol: 'NASDAQ:NFLX',
+    },
+    {
+      name: 'SAP',
+      symbol: 'NYSE:SAP',
+    },
+    {
+      name: 'Block',
+      symbol: 'NYSE:SQ',
+    },
+    {
+      name: 'Nvidia',
+      symbol: 'NASDAQ:NVDA',
+    },
+    {
+      name: 'Microstrategy',
+      symbol: 'NASDAQ:MSTR',
+    },
+  ].sort((a, b) => a.name.localeCompare(b.name));
 
   const assetsInDollar = assets.map((asset) => {
     return {
