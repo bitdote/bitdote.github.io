@@ -1,19 +1,19 @@
 ---
-import HeadlineDivider from '../components/HeadlineDivider.astro';
-import TextBlock from '../components/TextBlock.astro';
-import AssetsSection from '../components/money/AssetsSection.astro';
-import Layout from '../layouts/Layout.astro';
-import CurrencySection from '../components/money/CurrencySection.astro';
-import CurrencyCompetitionSection from '../components/money/CurrencyCompetitionSection.astro';
-import ImpactSection from '../components/money/ImpactSection.astro';
-import { t, changeLanguage } from 'i18next';
-import CandidatesSection from '../components/money/CandidatesSection.astro';
-import HeroSection from '../components/money/HeroSection.svelte';
+import HeadlineDivider from "../components/HeadlineDivider.astro";
+import TextBlock from "../components/TextBlock.astro";
+import AssetsSection from "../components/money/AssetsSection.astro";
+import Layout from "../layouts/Layout.astro";
+import CurrencySection from "../components/money/CurrencySection.astro";
+import CurrencyCompetitionSection from "../components/money/CurrencyCompetitionSection.astro";
+import ImpactSection from "../components/money/ImpactSection.astro";
+import { t, changeLanguage } from "i18next";
+import CandidatesSection from "../components/money/CandidatesSection.astro";
+import HeroSection from "../components/money/HeroSection.svelte";
 
-changeLanguage('en');
+changeLanguage("en");
 ---
 
-<Layout title="Welcome to Astro.">
+<Layout title="FixYourMoney">
   <HeroSection
     client:visible
     headlineFirst={t('hero.headline-first')}
