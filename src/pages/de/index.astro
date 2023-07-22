@@ -9,13 +9,11 @@ import ImpactSection from "../../components/money/ImpactSection.astro";
 import { t, changeLanguage } from "i18next";
 import CandidatesSection from "../../components/money/CandidatesSection.astro";
 import HeroSection from "../../components/money/HeroSection.svelte";
-import Banner from "../../components/Banner.svelte";
 
 changeLanguage("de");
 ---
 
-<Layout title="Welcome to Astro.">
-  <Banner client:visible />
+<Layout title="FixYourMoney">
   <HeroSection
     client:visible
     headlineFirst={t('hero.headline-first')}
