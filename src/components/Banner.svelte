@@ -5,7 +5,7 @@
 
 {#if $isBannerOpen}
   <div class="z-50 fixed w-full h-full bg-black bg-opacity-50 flex justify-center items-center">
-    <div transition:slide class="bg-white p-8 md:p-10 overflow-y-scroll md:max-w-xl rounded-xl">
+    <div transition:slide class="bg-white p-8 md:p-10 overflow-y-scroll max-h-screen md:max-w-xl rounded-xl">
       <h1 class="text-black mb-5 text-lg md:text-xl font-bold text-center">
         <i class="bi bi-lock-fill" /><span class="ms-4">Privatsphäre-Einstellungen</span>
       </h1>
