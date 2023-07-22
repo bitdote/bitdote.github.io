@@ -7,5 +7,7 @@ import mdx from "@astrojs/mdx";
 
 // https://astro.build/config
 export default defineConfig({
-  integrations: [svelte(), tailwind(), astroI18next(), mdx()]
+  integrations: [svelte(), tailwind(), astroI18next(), mdx()],
+  site: 'https://bitdote.github.io',
+  base: '/fixyourmoney',
 });
