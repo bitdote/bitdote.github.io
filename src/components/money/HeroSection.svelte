@@ -45,8 +45,11 @@
 
 ---
 
-<div class="absolute xl:fixed top-0 left-0 h-screen w-screen flex items-end -z-10 overflow">
-  <div class="slide h-3/4 w-full" class:show={!dollarInBitcoinChartIsVisible}>
+<div class="relative h-[calc(100vh-5rem)] xl:h-screen">
+  <div
+    class="slide absolute xl:fixed bottom-0 w-full h-1/2 xl:h-full xl:pt-32 -z-10"
+    class:show={!dollarInBitcoinChartIsVisible}
+  >
     <SymbolOverviewWidget
       chartOnly={true}
       noTimeScale={true}
@@ -60,32 +63,10 @@
       reloadable={false}
     />
   </div>
-</div>
-
-<!--
-<div class="absolute xl:fixed w-screen top-0 h-[calc(100vh-5rem)] -z-10 pt-96 md:pt-20 flex items-end">
-  <div class="h-3/4 md:h-full w-full xl:h-screen slide" class:show={!dollarInBitcoinChartIsVisible}>
-    <SymbolOverviewWidget
-      chartOnly={true}
-      noTimeScale={true}
-      assets={assetsBitcoinInDollar}
-      lineType={2}
-      backgroundColor="rgba(255, 255, 255, 0)"
-      copyright={false}
-      hideDateRanges={true}
-      scalePosition={'no'}
-      chartType={'area'}
-      reloadable={false}
-    />
-  </div>
-</div>
--->
-
-<!--
-<div
-  class="absolute xl:fixed top-0 h-[calc(100vh-5rem)] xl:h-screen -z-10 md:pt-20 pt-96 flex items-end overflow-hidden"
->
-  <div class="h-3/4 md:h-full w-full slide" class:show={dollarInBitcoinChartIsVisible}>
+  <div
+    class="slide absolute xl:fixed bottom-0 w-full h-1/2 xl:h-full xl:pt-32 -z-10"
+    class:show={dollarInBitcoinChartIsVisible}
+  >
     <SymbolOverviewWidget
       chartOnly={true}
       noTimeScale={true}
@@ -99,9 +80,53 @@
       reloadable={false}
     />
   </div>
-</div>
--->
+  <div
+    class="container mx-auto max-w-4xl w-full h-3/4 md:h-5/6 flex flex-col justify-center items-center text-3xl md:text-6xl"
+  >
+    <h1
+      class="font-bold mb-4 text-center transition-all"
+      class:font-normal={dollarInBitcoinChartIsVisible}
+      class:mb-0={dollarInBitcoinChartIsVisible}
+    >
+      {headlineFirst}
+      {#if !dollarInBitcoinChartIsVisible}
+        <span class="-m-2">?</span>
+      {/if}
 
+      {#if !dollarInBitcoinChartIsVisible}
+        <span>🚀</span>
+      {/if}
+      <br />
+    </h1>
+    {#if dollarInBitcoinChartIsVisible}
+      <h1 class="font-bold mb-4 text-center" transition:slide>{headlineSecond}?</h1>
+    {/if}
+
+    <span class="relative inline-flex">
+      <button
+        disabled={chartToggleButtonDisabled}
+        on:click={toggleChart}
+        class:animate-wiggle={!dollarInBitcoinChartIsVisible}
+        class="flex justify-center items-center transition-colors border-black border-4 rounded-xl group hover:text-white hover:bg-black disabled:bg-white disabled:text-black disabled:border-white"
+      >
+        <span class="flex items-center border-r-0 px-4 py-2 font-bold h-full text-base md:text-xl">
+          {#if dollarInBitcoinChartIsVisible}
+            <span>{dollarInBitcoin}</span>
+          {:else}
+            <span>{bitcoinInDollar}</span>
+          {/if}
+        </span>
+        <span
+          class="flex items-center border-black border-s-4 px-4 py-2 group-hover:border-white group-disabled:border-white"
+        >
+          <i class="bi bi-arrow-repeat text-xl transition-transform" class:rotate-90={dollarInBitcoinChartIsVisible} />
+        </span>
+      </button>
+    </span>
+  </div>
+</div>
+
+<!--
 <div class="container mx-auto max-w-4xl xl:mb-10">
   <div class="text-3xl h-[calc(100vh-5rem)] xl:h-screen flex flex-col items-center justify-center md:text-6xl">
     <h1
@@ -146,6 +171,7 @@
     </span>
   </div>
 </div>
+-->
 
 <style>
   .slide {
