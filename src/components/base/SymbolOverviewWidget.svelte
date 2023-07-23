@@ -174,7 +174,7 @@
   {#if copyright}
     <div class="tradingview-widget-copyright">
       <a href="https://www.tradingview.com/" rel="noopener" target="_blank"
-        ><span class="blue-text">by TradingView</span></a
+        ><span class="text-black">by TradingView</span></a
       >
     </div>
   {/if}

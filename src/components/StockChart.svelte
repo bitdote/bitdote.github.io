@@ -149,15 +149,15 @@
 </script>
 
 <Tabs {text} {tabs} on:tabChanged={onChangeTab}>
-  <div class="h-72 relative lg:h-96">
+  <div class="h-72 relative lg:h-[26rem]">
     <div class="h-full top-0 left-0 absolute w-full slide" class:show={activeTabId == 0}>
-      <SymbolOverviewWidget assets={assetsInDollar} chartOnly={true} copyright={false} />
+      <SymbolOverviewWidget assets={assetsInDollar} chartOnly={true} />
     </div>
     <div class="h-full top-0 left-0 absolute w-full slide" class:show={activeTabId == 1}>
-      <SymbolOverviewWidget assets={assetsInGold} chartOnly={true} copyright={false} />
+      <SymbolOverviewWidget assets={assetsInGold} chartOnly={true} />
     </div>
     <div class="h-full top-0 left-0 absolute w-full slide" class:show={activeTabId == 2}>
-      <SymbolOverviewWidget assets={assetsInBtc} chartOnly={true} copyright={false} scaleMode="Logarithmic" />
+      <SymbolOverviewWidget assets={assetsInBtc} chartOnly={true} scaleMode="Logarithmic" />
     </div>
   </div>
 </Tabs>
